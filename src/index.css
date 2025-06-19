@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --common-blue: #1637BA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ @theme{
+  --color-MainRed:#388E3C;
+  --color-Background:#F5F4F6;
+  --color-HeadingBlue:#2D4A73;
+  --color-DarkGreen:#455A64;
+ }
+
+ .recharts-sector:focus {
+  outline: none !important;
+}
+.recharts-pie-sector:focus, 
+.recharts-sector:focus, 
+.recharts-layer:focus {
+  outline: none !important;
+}
