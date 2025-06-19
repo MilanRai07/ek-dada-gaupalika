@@ -18,12 +18,12 @@ const data2 = [
    return (
       <div className="mt-12">
          <StatsHeader title='Survey reports and Analytics' />
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        <div className="bg-white p-6 rounded-lg shadow-sm">
+         <div className="grid grid-cols-1 min-[1123px]:grid-cols-2 gap-6 mt-8">
+        <div className="bg-white p-6 max-lg:p-3 rounded-lg shadow-sm">
           <PieCharts data={data1} title='Data 1'/>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow-sm">
+        <div className="bg-white p-6 max-lg:p-3 rounded-lg shadow-sm">
           <PieCharts data={data2} title='Data2' />
         </div>
       </div>

@@ -4,7 +4,7 @@ import CompanyLinks from "./CompanyLinks";
 import { ReactComponent as Down } from '../../assets/svg/chevronDown.svg';
 import { lazy, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-const Subscribe = lazy(() => import('./Subscribe'))
+const Map = lazy(() => import('./Map'))
 
 const FooterIndex = () => {
     const quickLinks = FooterLinks.find(item => item.Quick)?.Quick || [];
@@ -16,18 +16,17 @@ const FooterIndex = () => {
         <>
             <footer className="bg-DarkGreen text-white p-[75px] max-2xl:p-[55px] flex justify-between gap-24 max-[996px]:gap-14 max-[996px]:flex-col" >
                 <CompanyLinks />
-                <div className="flex justify-between w-full max-2xl:justify-center max-[764px]:flex-wrap max-[528px]:flex-col max-[528px]:items-start max-2xl:gap-14">
-                    <div className="max-[996px]:text-center max-[764px]:w-full">
-                        <h1 className="font-bold text-base max-[996px]:text-sm max-[764px]:hidden">Quick Links</h1>
-
+                <div className="flex justify-between max-[996px]:justify-center w-full gap-7 max-[764px]:flex-wrap max-[528px]:flex-col max-[528px]:items-start">
+                    <div className="max-[996px]:justify-center w-1/3 max-[764px]:w-full">
+                        <h1 className="font-bold text-base max-[996px]:text-sm max-[764px]:hidden ">Quick Links</h1>
                         {/* below is for small screen */}
                         <div className="hidden font-semibold text-base max-[996px]:text-sm max-[764px]:flex justify-between border-b-[0.6px] 
-                    border-b-white pb-2 items-center                   "
+                    border-b-white pb-2"
                             onClick={
                                 () => setShowQuick(!showQuick)
                             }
                         >
-                            <p className="font-bold text-xs">Quick Links</p>
+                            <p className="font-bold text-xs text-start">Quick Links</p>
                             <Down className='w-[10px] h-[7px] stroke-2 stroke-white' />
                         </div>
                         <div>
@@ -40,7 +39,7 @@ const FooterIndex = () => {
                                             exit={{ opacity: 0 }}
                                             transition={{ duration: 0.7, ease: 'easeInOut' }}
 
-                                            className="mt-2 flex-col items-start  gap-2 max-[996px]:gap-1 hidden max-[764px]:flex rounded-[8px]">
+                                            className="mt-2 flex-col items-start gap-2 max-[996px]:gap-1 hidden max-[764px]:flex rounded-[8px]">
                                             {
                                                 quickLinks.map((items, index) => {
                                                     const { name, path } = items;
@@ -65,7 +64,7 @@ const FooterIndex = () => {
 
 
                         {/* below is for large screen */}
-                        <ul className="mt-3 flex flex-col  gap-2 max-[996px]:gap-1 max-[764px]:hidden">
+                        <ul className="mt-3 flex flex-col gap-2 items-start max-[996px]:gap-1 max-[764px]:hidden">
                             {
                                 quickLinks.map((items, index) => {
                                     const { name, path } = items;
@@ -80,7 +79,7 @@ const FooterIndex = () => {
                             }
                         </ul>
                     </div>
-                    <div className="max-[996px]:text-center max-[764px]:w-full">
+                    <div className=" max-[764px]:w-full w-[25%]">
                         <h1 className="font-bold text-base max-[996px]:text-sm max-[764px]:hidden ">Contacts</h1>
 
                         {/* below is for small screen */}
@@ -171,7 +170,7 @@ const FooterIndex = () => {
                             </li>
                         </ul>
                     </div>
-                    <Subscribe />
+                    <Map />
                 </div>
 
             </footer>

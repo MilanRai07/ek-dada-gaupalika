@@ -1,16 +1,26 @@
-import { Link } from 'react-router-dom';
-// import { ReactComponent as Logo } from '../../assets/svg/bajra-logo.svg'
+import { Link, NavLink } from 'react-router-dom';
+import Logo from '../../assets/image/logo.webp';
 import { FooterMedia } from '../../localData/footer/FooterMedia';
 
 const CompanyLinks = () => {
     return (
-        <div className='flex flex-col items-center gap-4 max-[996px]:gap-2'>
-            <Link to='/'>
-                <div className='w-[110px] max-[996px]:w-[80px] max-[996px]:h-[60px] h-[93px]' >
-  LOGO
+        <div className='flex flex-col gap-4 max-[996px]:gap-2 max-[996px]:items-center'>
+            <NavLink to='/'>
+                <div className='w-[100px] max-[996px]:w-[80px] max-[996px]:h-[60px] h-[93px]' >
+       
+                        <img
+                            src={Logo}
+                            className='w-full h-full '
+                            alt='Logo'
+                        />
+             
                 </div>
-              
-            </Link>
+
+            </NavLink>
+            <p className='font-medium text-xs leading-5 max-[996px]:text-center max-[996px]:w-[600px] max-[679px]:w-[400px] max-[539px]:w-[300px]'>
+                Building stronger communities through transparency and engagement. Connect with us for the latest updates and
+                civic opportunities.
+            </p>
             <div>
                 <div className='flex gap-3'>
                     {
@@ -27,7 +37,7 @@ const CompanyLinks = () => {
                                     hover:bg-MainRed/90 transition-all duration-300 ease-in-out
                                     ">
                                         {icon}
-                                        
+
                                     </div>
                                 </a>
                             )

@@ -4,12 +4,12 @@ const MunicipalCardStat = ({ color }) => {
     const percentage = Math.round((numerator / denominator) * 100 * 10) / 10;
 
     return (
-        <div className='w-[385px] h-[170px] rounded-[10px] bg-white shadow-sm grid place-items-center p-8'
+        <div className='w-[385px] max-[880px]:w-[350px] max-[796px]:w-[320px] max-[756px]:w-[280px] max-sm:w-full h-[170px] rounded-[10px] bg-white shadow-sm grid place-items-center p-8'
              style={{ borderTop: `8px solid ${color}` }}>
             <div className="w-full flex flex-col gap-3">
                 <div className="flex justify-between">
-                    <p className="font-bold text-[15px]">House Buildings Standards</p>
-                    <p className="font-bold text-[15px]">
+                    <p className="font-bold text-[15px] max-sm:text-[13px]">House Buildings Standards</p>
+                    <p className="font-bold text-[15px] max-sm:text-[13px]">
                         {numerator.toLocaleString()}/{denominator.toLocaleString()}
                     </p>
                 </div>

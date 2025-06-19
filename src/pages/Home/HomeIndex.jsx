@@ -8,19 +8,21 @@ import TeamIndex from "./Team/TeamIndex";
 const HomeIndex = () => {
    return (
       <main>
-       <div className="px-[75px] max-lg:px-[45px]">
+         <div className="px-[75px] max-lg:px-[45px] max-sm:px-[30px]">
             <NoticeIndex />
             <HeroHomeIndex />
          </div>
-           {/* 
+
          <TeamIndex />
-         <div className="px-[75px]">
+
+         <div className="px-[75px]  max-lg:px-[45px] max-sm:px-[30px]">
             <AboutIndex />
          </div>
+
          <StatisticsIndex />
-         <div className="px-[75px]">
-            <PublicNotice/>
-         </div> */}
+         <div className="px-[75px]  max-lg:px-[45px] max-sm:px-[30px]">
+            <PublicNotice />
+         </div>
       </main>
    )
 }

@@ -17,15 +17,17 @@ const StatisticsIndex = () => {
         ...wards.map(ward => `Ward ${ward}`)
     ];
     return (
-        <section className="py-[60px] bg-Background px-[75px]">
+        <section className="py-[60px] bg-Background px-[75px]  max-lg:px-[45px] max-sm:px-[30px] max-md:py-[48px] max-sm:py-[28px]">
             <CommonHeaders title='Municipality Statistics & Data' />
-            <div className="w-full h-[110px] bg-MainRed mt-12 rounded-[10px] px-7 flex justify-between items-center">
-                <div className="text-white">
-                    <p className="font-extrabold text-[18px]">Municipality Data Overview</p>
-                    <p className="font-medium text-sm">Comprehensive statistical information and demographic data of Ekdada Gaupalika</p>
+            <div className="w-full h-[110px] max-lg:h-auto max-lg:py-4  bg-MainRed mt-12 max-md:mt-10 max-sm:mt-9 rounded-[10px] px-7 flex justify-between items-center max-lg:flex-col max-lg:items-center
+            max-lg:gap-3
+            ">
+                <div className="text-white max-lg:text-center">
+                    <p className="font-extrabold text-[18px] max-lg:text-[16px]">Municipality Data Overview</p>
+                    <p className="font-medium text-sm max-lg:text-sm max-sm:text-xs max-sm:mt-2">Comprehensive statistical information and demographic data of Ekdada Gaupalika</p>
                 </div>
-                <div className="relative w-[135px] h-[55px] bg-white rounded-[10px] grid place-items-center font-semibold text-[15px] cursor-pointer">
-                    <div className="flex items-center gap-4"
+                <div className="relative w-[135px] max-sm:w-[120px] h-[55px] max-sm:h-[45px] bg-white rounded-[10px] grid place-items-center font-semibold text-[15px] cursor-pointer">
+                    <div className="flex items-center gap-4 max-lg:text-[13px] "
                         onClick={() => setSHowDrop(!showDrop)}
                     >
                         <span>{selectedWard}</span>
@@ -65,8 +67,8 @@ const StatisticsIndex = () => {
             <Stats1 />
             <Stats2 />
             <Stats3 />
-            <Stats4 />
-            <Stats5 />
+             <Stats4 />
+            <Stats5 /> 
 
         </section>
     )

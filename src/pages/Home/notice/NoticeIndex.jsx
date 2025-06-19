@@ -1,6 +1,6 @@
 const NoticeIndex=()=>{
    return(
-    <section className="mt-8">
+    <section className="mt-8 max-lg:mt-5 max-sm:mt-3">
         <div className="w-full bg-MainRed h-[65px] max-md:h-[55px] max-sm:h-[45px] rounded-[15px] flex items-center
         font-extrabold text-md max-md:text-sm max-sm:text-[13px] p-4 text-white gap-3">
             <p>Latest</p>

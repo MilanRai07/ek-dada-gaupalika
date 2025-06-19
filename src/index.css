@@ -18,6 +18,7 @@ html {
   --color-Background:#F5F4F6;
   --color-HeadingBlue:#2D4A73;
   --color-DarkGreen:#455A64;
+
  }
 
  .recharts-sector:focus {
@@ -27,4 +28,14 @@ html {
 .recharts-sector:focus, 
 .recharts-layer:focus {
   outline: none !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important;
 }
